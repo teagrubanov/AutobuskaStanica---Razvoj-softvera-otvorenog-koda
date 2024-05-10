@@ -1,0 +1,33 @@
+﻿<Window x:Class="AS.Admin.OtkazaneRezervacije"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AS.Admin"
+        mc:Ignorable="d"
+        Title="Otkazane Rezervacije" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="RezervacijeDataGrid"  AutoGenerateColumns="False" Margin="0,83,0,119" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding idVoznje}" Header="ID Vožnje"  Width="80"/>
+                <DataGridTextColumn Binding="{Binding NazivPrevoznika}" Header="Naziv prevoznika" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Datum}" Header="Datum polaska" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Vreme}" Header="Vreme polaska" Width="*"/>
+                <DataGridTextColumn Binding="{Binding MestoPolaska}" Header="Mesto polaska" Width="*"/>
+                <DataGridTextColumn Binding="{Binding MestoDolaska}" Header="Mesto dolaska" Width="*"/>
+                <DataGridTextColumn Binding="{Binding idKorisnika}" Header="ID Korisnika" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Korisnik}" Header="Putnik" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Status}" Header="Status" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="NazadButton" Content="Nazad" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="18" Click="btnNazad_Click"/>
+        <Label x:Name="RezervacijeLabel" Content="Otkazane rezervacije" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

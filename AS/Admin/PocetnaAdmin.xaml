@@ -1,0 +1,32 @@
+﻿<Window x:Class="AS.Admin.PocetnaAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AS.Admin"
+        mc:Ignorable="d"
+        Title="Početna Admin" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="VoznjeButton1" Content="Voznje" HorizontalAlignment="Left" Margin="115,116,0,0" VerticalAlignment="Top" Height="38" Width="121" FontSize="18"/>
+        <Button x:Name="VoznjeButton_Copy2" Content="Voznje" HorizontalAlignment="Left" Margin="115,116,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="18"/>
+        <Button x:Name="VoznjeButton_Copy3" Content="Voznje" HorizontalAlignment="Left" Margin="512,116,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="18"/>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="VoznjeButton" Content="Vožnje" HorizontalAlignment="Left" Margin="115,116,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="18" Click="btnVoznje_Click"/>
+            <Button x:Name="RezervacijeButton" Content="Rezervacije" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="18" Click="btnRezervacije_Click"/>
+            <Button x:Name="PrevozniciButton" Content="Prevoznici" HorizontalAlignment="Left" Margin="497,116,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="18" Click="btnPrevoznici_Click"/>
+            <Button x:Name="OdjaviseButton" Content="Odjavi se" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Height="38" Width="187" FontSize="18" Click="btnOdjava_Click"/>
+        </Grid>
+    </Grid>
+</Window>

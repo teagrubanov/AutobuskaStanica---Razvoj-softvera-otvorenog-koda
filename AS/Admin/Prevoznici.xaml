@@ -1,0 +1,36 @@
+﻿<Window x:Class="AS.Admin.Prevoznici"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AS.Admin"
+        mc:Ignorable="d"
+        Title="Prevoznici" Height="450" Width="820">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="PrevoznikDataGrid" AutoGenerateColumns="False" Margin="10,37,385,189" SelectionChanged="PrevoznikDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding NazivPrevoznika}" Header="Naziv prevoznika"  Width="220"/>
+                <DataGridTextColumn Binding="{Binding AdresaPrevoznika}" Header="Adresa prevoznika" Width="*"/>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+        <Label x:Name="PrevoznikLabel" Content="Prevoznik" HorizontalAlignment="Left" Margin="470,84,0,0" VerticalAlignment="Top" Width="108" FontSize="18"  FontWeight="Bold"/>
+        <Label x:Name="AdresaPrevoznikaLabel" Content="Adresa prevoznika" HorizontalAlignment="Left" Margin="470,153,0,0" VerticalAlignment="Top" Width="173" FontSize="18"  FontWeight="Bold"/>
+        <Button x:Name="DodajButton" Content="Dodaj" HorizontalAlignment="Left" Margin="490,238,0,0" VerticalAlignment="Top" FontSize="14" Background="GreenYellow" Width="68"  FontWeight="Bold" Click="btnDodaj_Click" Height="33"/>
+        <Button x:Name="ObrisiButton" Content="Obriši" HorizontalAlignment="Left" Margin="683,238,0,0" VerticalAlignment="Top" FontSize="14" Background="IndianRed" Width="67" FontWeight="Bold" Click="btnObrisi_Click" Height="33"/>
+        <Button x:Name="NazadButton" Content="Nazad" HorizontalAlignment="Left" Margin="55,366,0,0" VerticalAlignment="Top" Height="38" Width="187"  FontSize="18" Click="btnNazad_Click"/>
+        <Button x:Name="ObrisiSelekcijuButton" Content="Obriši selekciju" HorizontalAlignment="Left" Margin="538,366,0,0" VerticalAlignment="Top" Height="38" Width="186" FontSize="18" Click="btnObrisiSelekciju_Click"/>
+        <TextBox x:Name="NazivPrevoznikaTxtBox" HorizontalAlignment="Left" Margin="643,92,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
+        <TextBox x:Name="AdresaPrevoznikaTxtBox" HorizontalAlignment="Left" Margin="643,161,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
+        <Button x:Name="IzmeniButton" Content="Izmeni" HorizontalAlignment="Left" Margin="585,238,0,0" VerticalAlignment="Top" FontSize="14" Background="LightGoldenrodYellow" Width="68"  FontWeight="Bold" Click="btnIzmeni_Click" Height="33"/>
+    </Grid>
+</Window>
